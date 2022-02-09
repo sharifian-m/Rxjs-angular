@@ -1,0 +1,31 @@
+<div class=" container-fluid" *ngIf="selectedProduct$|async as product" >
+    <div class="card m-4 w-75 mx-auto">
+        <div class="card-header">
+            جزییات محصولات
+        </div>
+
+        <div class="container " > 
+            <div class="row">
+                <div class="col-sm-2">Name:</div>
+                <div class="col-md-6">{{product.productName}}</div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">Code:</div>
+                <div class="col-md-6">{{product.productCode}}</div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">description:</div>
+                <div class="col-md-6">{{product.description}}</div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">price:</div>
+                <div class="col-md-6">{{product.price}}</div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"> categoryId:</div>
+                <div class="col-md-6">{{product.categoryId}}</div>
+            </div>
+        </div>
+     
+    </div>
+    </div>

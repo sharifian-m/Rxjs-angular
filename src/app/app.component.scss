@@ -1,0 +1,25 @@
+
+header{
+    background-color: #ebeaf5;
+}
+.navbar {
+    padding: 0;
+  }
+  .navbar ul {
+    margin: 0;
+    padding: 15px;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+
+  .nav-link {
+    cursor: pointer;
+  }
+  
+  .nav-link.active {
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: rgb(9, 96, 158);
+  }
