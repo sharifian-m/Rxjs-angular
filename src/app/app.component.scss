@@ -1,6 +1,7 @@
 
 header{
-    background-color: #ebeaf5;
+    background-color: var(--pink);
+    
 }
 .navbar {
     padding: 0;
@@ -15,11 +16,22 @@ header{
 
   .nav-link {
     cursor: pointer;
+    color: var(--light-gray);
+    text-decoration: none;
+    padding-bottom: 8px;
   }
   
   .nav-link.active {
-    color: #ffffff;
-    padding: 5px;
+    color:var(--light-gray);
+    
     border-radius: 8px;
-    background-color: rgb(9, 96, 158);
+      border-right:1px solid var(--white);
+    border-left:1px solid var(--white); 
+    // border-bottom:1px solid var(--white);
+    // border-top:1px solid var(--white); 
+  
   }
+ li{
+   font-weight: 500;
+ }
+ 

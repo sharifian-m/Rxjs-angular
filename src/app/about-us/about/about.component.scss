@@ -1,0 +1,21 @@
+.wrapper {
+    direction: ltr;
+}
+
+.socialNetwork > a > i {
+    color: var(--gray);
+    font-size: 18px;
+    padding: 7px;
+    border-radius: 50%;
+    background-color: var(--white);
+}
+.socialNetwork > a > i:hover {
+    border: 1px solid var(--dark-gray);
+    font-weight: 600;
+    color: var(--white);
+    background: linear-gradient(to bottom, var(--gray), var(--pink), var(--white));
+
+}
+span{
+    font-weight: 900;
+}

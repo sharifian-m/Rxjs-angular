@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, combineLatest, EMPTY, Observable, throwError } from 'rxjs';
-import { catchError, map, shareReplay, tap } from 'rxjs/operators';
+import { BehaviorSubject, combineLatest, EMPTY, from, Observable, throwError } from 'rxjs';
+import { catchError, filter, map, mergeMap, shareReplay, switchMap, tap } from 'rxjs/operators';
 
 import { Product } from './models/product';
 import { ProductCategoryService } from './product-category.service';
@@ -38,7 +38,7 @@ productwithCategory$=combineLatest([
   this.productList$,this.productCategory.productCtegory$]).pipe( 
   map(([products,categories]) =>products.map(product =>({
    ...product ,
-   price:product.price? product.price* 2 : '' ,
+  //  price:product.price? product.price* 2 : '' ,
  category: categories.find(cat=>  product.categoryId  === cat.id )?.name 
 
   })as Product))
@@ -67,5 +67,6 @@ productwithCategory$=combineLatest([
     tap(product => console.log('selectedProduct', product)),
     shareReplay(1)
   );
+
 
 }

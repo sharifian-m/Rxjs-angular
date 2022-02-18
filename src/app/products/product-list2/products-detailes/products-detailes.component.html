@@ -1,31 +1,51 @@
-<div class=" container-fluid" *ngIf="selectedProduct$|async as product" >
-    <div class="card m-4 w-75 mx-auto">
-        <div class="card-header">
+<div class=" container-fluid " *ngIf="vm$|async as vm" >
+    <div class="card bg-card  w-100 mx-auto">
+        <div class="card-header p-3 fw-bold">
             جزییات محصولات
-        </div>
+        </div> 
 
-        <div class="container " > 
-            <div class="row">
-                <div class="col-sm-2">Name:</div>
-                <div class="col-md-6">{{product.productName}}</div>
+        <div class="container-fluid my-2  " > 
+            <div class="detiles  p-2 d-flex flex-row justify-content-start">
+                <div class=" me-2 text-start">نام محصول:</div>
+                <div class=" ">{{vm.product.productName}}</div>
             </div>
-            <div class="row">
-                <div class="col-md-2">Code:</div>
-                <div class="col-md-6">{{product.productCode}}</div>
+            <div class=" detiles p-2 d-flex flex-row justify-content-star">
+                <div class="me-2   text-start">کد محصول : </div>
+                <div class="  text-start">{{vm.product.productCode}}</div>
             </div>
-            <div class="row">
-                <div class="col-md-2">description:</div>
-                <div class="col-md-6">{{product.description}}</div>
+            <div class="  detiles p-2 d-flex flex-row justify-content-start">
+                <div class=" me-2 text-start">توضیحات:</div>
+                <div class=" ">{{vm.product.description}}</div>
             </div>
-            <div class="row">
-                <div class="col-md-2">price:</div>
-                <div class="col-md-6">{{product.price}}</div>
+            <div class="  detiles p-2 d-flex flex-row justify-content-start">
+                <div class=" me-2 text-start">قیمت:</div>
+                <div class=" ">{{vm.product.price }}{{"ریال"}}</div>
             </div>
-            <div class="row">
-                <div class="col-md-2"> categoryId:</div>
-                <div class="col-md-6">{{product.categoryId}}</div>
+            <div class=" detiles p-2 d-flex flex-row justify-content-start">
+                <div class="me-2  text-start">شماره گروه:</div>
+                <div class=" ">{{vm.product.categoryId}}</div>
             </div>
         </div>
      
+        <div class="table-responsive"
+        >
+    <table class="table mb-0"
+           *ngIf="vm.productSuppliers && vm.productSuppliers.length">
+      <thead>
+        <tr>
+          <th>فروشنده</th>
+          <th>قیمت</th>
+          <th>تعداد موجود</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let supplier of vm.productSuppliers">
+          <td>{{ supplier.name }} </td>
+          <td>{{ supplier.cost }}</td>
+          <td>{{ supplier.minQuantity }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
     </div>
     </div>

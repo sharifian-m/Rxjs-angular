@@ -1,0 +1,30 @@
+
+.col-2{
+    border-right: 1px solid var(--dark-gray);
+}
+.contact{
+    font-size: 18px;
+    font-weight: 500;
+}
+.contact:hover{
+    color: #000000;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.information{
+    font-size: 16px;
+    font-weight: 600;
+}
+.information:hover{
+    color: #000000;
+    font-size: 17px;
+    font-weight: 700;
+}
+.phone{
+    font-family: Tahoma;
+}
+.work a:hover{
+font-size:17px ;
+font-weight: 500;
+}

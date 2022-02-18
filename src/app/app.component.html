@@ -1,6 +1,6 @@
-<header>
+<header class="p-0">
   <div class="container-fluid  container-xl">
-    <nav id="navbar" class=" navbar p-0">
+    <nav  class=" navbar p-0">
    <ul>
      <li><a class="nav-link scrollto " [routerLink]="['/welcome']" 
       routerLinkActive="active" 
@@ -9,12 +9,14 @@
      <li><a class="nav-link scrollto " [routerLink]="['/products']" 
        routerLinkActive="active"
        [routerLinkActiveOptions]="{ exact : true}"
-      >لیست محصولات
+      >نمایش محصولات
     </a></li>
      <li><a class="nav-link scrollto " [routerLink]="['/products/products2']" 
-      routerLinkActive="active" >جزییات محصولات
+      routerLinkActive="active" >دسته بندی محصولات
      </a></li>
-     
+     <li><a class="nav-link scrollto " [routerLink]="['/AboutUs']" 
+      routerLinkActive="active" >  دربار من
+     </a></li>
    </ul>
    </nav>
   </div>

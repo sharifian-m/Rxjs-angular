@@ -1,0 +1,21 @@
+<section class="">
+    <div class="continer ">
+        <div class=" row d-flex d-flex  justify-content-center align-items-center">
+            <div class="wrapper ">
+
+                <router-outlet></router-outlet>
+
+                <footer class="">
+                    <div class="row ">
+                        <div class="col" [routerLink]="['about']"  routerLinkActive="acivelink" 
+                        [routerLinkActiveOptions]="{ exact : true}">ABOUT</div>
+                        <div class="col" [routerLink]="['experience']"  routerLinkActive="acivelink" 
+                        [routerLinkActiveOptions]="{ exact : true}">EXPRIENCE</div>
+                        <div class="col" [routerLink]="['contact']"  routerLinkActive="acivelink" 
+                        [routerLinkActiveOptions]="{ exact : true}">CONTACT</div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</section>

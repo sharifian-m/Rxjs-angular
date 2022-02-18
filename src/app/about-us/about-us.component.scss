@@ -1,0 +1,47 @@
+section {
+  direction: ltr;
+  overflow: hidden;
+}
+
+
+.wrapper {
+  background: linear-gradient(var(--dark-gray), var(--pink), var(--white));
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 30px;
+  max-width: 400px;
+  overflow-y: auto;
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden;
+  transition: 0.3s;
+}
+
+footer {
+  margin-top: 40px;
+}
+footer .row .col {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px;
+}
+footer .row .col:hover {
+  background: linear-gradient(to bottom, var(--gray), var(--pink), var(--white));
+  border-radius: 2px;
+}
+.acivelink{
+  background: linear-gradient(to bottom, var(--gray), var(--pink), var(--white));
+  border-radius: 2px;
+}
+@media screen and (max-width: 992px) {
+  footer {
+    margin-top:20px;
+  }
+  footer .row .col {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px;
+  }
+}

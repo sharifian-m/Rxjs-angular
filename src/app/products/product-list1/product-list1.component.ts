@@ -17,9 +17,6 @@ export class ProductList1Component {
   constructor(private productservice: ProductsService,
     private CategoryService: ProductCategoryService) { }
 
-  // private categorySelectedSubject= new Subject<number>();
-  // categorySelectedAction$=this.categorySelectedSubject.asObservable();
-
   private categorySelectedSubject = new BehaviorSubject<number>(0);
   categorySelectedAction$ = this.categorySelectedSubject.asObservable();
 
@@ -29,15 +26,7 @@ export class ProductList1Component {
       return EMPTY
     })
   )
-
-  // productList$ = this.productservice.productList$.pipe(
-  //   catchError(err => {
-  //     console.log('error occure');
-  //     return EMPTY
-  //   })
-  //  )
-
-  //  productwithCategory$=this.productservice.productwithCategory$
+  
   productList$ = combineLatest([
     this.productservice.productwithCategory$,
     this.categorySelectedAction$

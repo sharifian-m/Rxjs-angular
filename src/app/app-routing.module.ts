@@ -11,8 +11,12 @@ const routes: Routes = [
  loadChildren: () =>
    import('./products/products.module').then(m => m.ProductsModule)
 },
+
+{path: 'AboutUs',
+loadChildren: () =>
+  import('./about-us/about-us.module').then(m => m.AboutUsModule)
+},
 //  { path: '**', component: PageNotFoundComponent },
- 
 ];
 
 @NgModule({

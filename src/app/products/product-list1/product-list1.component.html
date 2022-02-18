@@ -1,6 +1,6 @@
 <div class=" container-fluid">
   <div class="card m-4 w-75 mx-auto">
-    <div class="card-header">
+    <div class="card-header p-3 fw-bold">
       محصولات
     </div>
 
@@ -9,15 +9,15 @@
         <option  value="0">- نمایش همه -</option>
         <option [value]="cat.id" *ngFor="let cat of  productCtegory$|async ">{{cat.name}}</option>
       </select>
-      <hr>
-      <table class="table mt-5" *ngIf="productList$ | async as products">
+     
+      <table class="table mt-2" *ngIf="productList$ | async as products">
         <thead>
           <tr class="p-4">
-            <th>Product</th>
-            <th>Code</th>
-            <th>Category</th>
-            <th>Price</th>
-            <th>In Stock</th>
+            <th  class="p-3">نام </th>
+            <th class="p-3">کد </th>
+            <th class="p-3">گروه </th>
+            <th class="p-3">قیمت</th>
+            <th class="p-3">موجودی در انبار</th>
           </tr>
         </thead>
         <tbody>
@@ -26,8 +26,8 @@
             <td class="p-3">{{ product.productName }}</td>
             <td class="p-3">{{ product.productCode }}</td>
             <td class="p-3">{{ product.category }}</td>
-            <td class="p-3">{{ product.price | currency:"USD":"symbol":"1.2-2" }}</td>
-            <td class="p-3">{{ product.quantityInStock }}</td>
+            <td class="p-3">{{ product.price }}{{"ریال"}}</td>
+            <td class="p-3 text-center">{{ product.quantityInStock }}</td>
           </tr>
 
         </tbody>

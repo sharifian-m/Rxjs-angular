@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+
 @import "~bootstrap/dist/css/bootstrap.rtl.min.css";
 @font-face {
     font-family: shabnam;
@@ -7,7 +8,7 @@
     font-weight: normal;
     font-style: normal;
   }
-  
+
   @font-face {
     font-family: sahel;
     src: url('assets/fonts/sahel-font-v1.0.0-alpha14/Sahel.eot');
@@ -15,4 +16,132 @@
     font-weight: normal;
     font-style: normal;
   }
+  :root{
+    --dark-gray:#4A4A4A;
+    --pink:#92324a;
+    --gray:#ABA5A8;
+    --light-gray:#F7F7F7;
+    --white:#ffffff;
+  }
+  body{
+    background-color: var(--dark-gray);
+    font-family:"Georgia", Verdana;  ;
+  }
+
+a {
+  color:var(--white);
+  text-decoration: none;
+}
+a:hover {
+  color:var(--light-gray);
+}
+.btn-outline-dark {
+  color: var(--white);
+  border-color:var(--white);
+}
+.btn-outline-dark:hover {
+  color: var(--white);
+  background-color: var(--dark-gray);
+  border-color: var(--dark-gray);
+}
+.card {
+  border: none;
+  background-color: var(--light-gray);
+}
+
+.card-header {
+  background-color: var(--pink);
+  color:var(--white)
+}
+.list-group-item {
+  color: var(--dark-gray);
+  text-decoration: none;
+  background-color: var(--gray);
+  border: 1px solid var(--light-gray);
+}
+.list-group-item:hover {
+ font-size: 16px;
+ font-weight: 700;
+}
+
+
+.form-select {
+  background-color: var(--light-gray);
+  color: var(--dark-gray);
+}
+
+.form-select:focus {
+  border-color: var(--dark-gray);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem var(--light-gray);
+}
+.pic img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.pic img:hover {
+  border: 3px outset rgba(255,255,255,0.9);
+}
+
+.name {
+  color: #000000;
+  font-size: 24px;
+  font-weight: 700;
+}
+.name:hover {
+ color: var(--white);
+}
+.skill {
+  font-size: 18px;
+  font-weight: 500;
+  color: #363333;
+}
+.skill:hover {
+  color: var(--white);
+}
+
+.about {
+  font-size: 18px;
+  font-weight: 500;
+}
+.about:hover{
+  color: #000000;
+  font-size: 19px;
+  font-weight: 700;
+}
+.description:hover{
+color: #000000;
+font-weight: 500;
+font-family:"DM Sans", sans-serif;  
+}
+.description {
+  width: 95%;
+  font-size: 15px;
+}
+@media screen and (max-width: 992px) {
+ 
+  .name {
+    color: #000000;
+    font-size: 22px;
+    font-weight: 600;
+  }
+ 
+  .skill {
+    font-size: 16px;
+    font-weight: 500;
+    color: #363333;
+  }
+ 
   
+  .about {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+
+  .description {
+    width: 90%;
+    font-size: 14px;
+  } 
+}

@@ -1,7 +1,7 @@
 <section> 
     <div class="container-fluid ">
         <div class="card dir-rtl"  *ngIf=" productList$ | async as products" >
-            <div class="card-header p-3">
+            <div class="card-header p-3 fw-bold">
              لیست محصولات
             </div>
             
@@ -9,7 +9,7 @@
             <button type='button'
             class='list-group-item'
             *ngFor='let product of products'
-            [ngClass]="{active: product?.id === (selectedProduct$|async)?.id}"
+            [ngClass]="{active2: product?.id === (selectedProduct$|async)?.id}"
             (click)='onselected(product.id)'>
       {{ product.productName }} ({{ product.category }})
     </button>
