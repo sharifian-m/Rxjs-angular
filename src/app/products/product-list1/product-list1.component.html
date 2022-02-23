@@ -1,16 +1,16 @@
 <div class=" container-fluid">
-  <div class="card m-4 w-75 mx-auto">
+  <div class="card  m-4 w-md-75 mx-auto ">
     <div class="card-header p-3 fw-bold">
       محصولات
     </div>
 
     <div class="container">
-      <select class="form-select w-25 my-5" (change)="onSelected($any($event.target).value)">
+      <select class="form-select w-50 my-5" (change)="onSelected($any($event.target).value)">
         <option  value="0">- نمایش همه -</option>
         <option [value]="cat.id" *ngFor="let cat of  productCtegory$|async ">{{cat.name}}</option>
       </select>
      
-      <table class="table mt-2" *ngIf="productList$ | async as products">
+      <table class="table table-responsive table-striped mt-2" *ngIf="productList$ | async as products">
         <thead>
           <tr class="p-4">
             <th  class="p-3">نام </th>

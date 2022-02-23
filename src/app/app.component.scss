@@ -27,11 +27,14 @@ header{
     border-radius: 8px;
       border-right:1px solid var(--white);
     border-left:1px solid var(--white); 
-    // border-bottom:1px solid var(--white);
-    // border-top:1px solid var(--white); 
-  
+      
   }
  li{
    font-weight: 500;
  }
  
+ @media screen and (max-width: 992px) {
+  li{
+    font-size: 13px;
+  } 
+ }

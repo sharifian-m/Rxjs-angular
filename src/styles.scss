@@ -4,11 +4,14 @@
 @font-face {
     font-family: shabnam;
     src: url('assets/fonts/shabnam-font-v2.4.0/Shabnam.eot');
-    src: url('assets/fonts/shabnam-font-v2.4.0/Shabnam.eot?#iefix') format('assets/fonts/shabnam-font-v2.4.0/Shabnam-opentype'), url('assets/fonts/shabnam-font-v2.4.0/Shabnam.woff') format('woff'), url('assets/fonts/shabnam-font-v2.4.0/Shabnam.ttf') format('truetype');
+    src: url('assets/fonts/shabnam-font-v2.4.0/Shabnam.eot?#iefix') 
+    format('assets/fonts/shabnam-font-v2.4.0/Shabnam-opentype'),
+     url('assets/fonts/shabnam-font-v2.4.0/Shabnam.woff') format('woff'),
+      url('assets/fonts/shabnam-font-v2.4.0/Shabnam.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
-
+  
   @font-face {
     font-family: sahel;
     src: url('assets/fonts/sahel-font-v1.0.0-alpha14/Sahel.eot');
@@ -18,14 +21,14 @@
   }
   :root{
     --dark-gray:#4A4A4A;
-    --pink:#92324a;
+    --pink:#7c1730;
     --gray:#ABA5A8;
     --light-gray:#F7F7F7;
     --white:#ffffff;
   }
   body{
     background-color: var(--dark-gray);
-    font-family:"Georgia", Verdana;  ;
+    font-family:"shabnam", 'sahel';  
   }
 
 a {
@@ -47,11 +50,14 @@ a:hover {
 .card {
   border: none;
   background-color: var(--light-gray);
+  padding: 3px;
+  border-radius: 8px;   
 }
 
 .card-header {
   background-color: var(--pink);
-  color:var(--white)
+  color:var(--white);
+  border-radius: 8px;
 }
 .list-group-item {
   color: var(--dark-gray);

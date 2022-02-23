@@ -5,8 +5,8 @@ import { WelcomeComponent } from './home/welcome/welcome.component';
 
 
 const routes: Routes = [
- { path: 'welcome', component: WelcomeComponent },
- { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+//  { path: 'welcome', component: WelcomeComponent },
+ { path: '', redirectTo: 'products', pathMatch: 'full' },
  {path: 'products',
  loadChildren: () =>
    import('./products/products.module').then(m => m.ProductsModule)

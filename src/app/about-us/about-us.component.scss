@@ -1,6 +1,7 @@
 section {
   direction: ltr;
   overflow: hidden;
+  font-family:"Georgia", Verdana;  
 }
 
 
@@ -30,9 +31,10 @@ footer .row .col:hover {
   background: linear-gradient(to bottom, var(--gray), var(--pink), var(--white));
   border-radius: 2px;
 }
-.acivelink{
+.activelink{
   background: linear-gradient(to bottom, var(--gray), var(--pink), var(--white));
   border-radius: 2px;
+  color: #000000;
 }
 @media screen and (max-width: 992px) {
   footer {

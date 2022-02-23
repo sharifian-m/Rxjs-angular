@@ -1,51 +1,54 @@
-<div class=" container-fluid " *ngIf="vm$|async as vm" >
-    <div class="card bg-card  w-100 mx-auto">
-        <div class="card-header p-3 fw-bold">
-            جزییات محصولات
-        </div> 
-
-        <div class="container-fluid my-2  " > 
-            <div class="detiles  p-2 d-flex flex-row justify-content-start">
-                <div class=" me-2 text-start">نام محصول:</div>
-                <div class=" ">{{vm.product.productName}}</div>
-            </div>
-            <div class=" detiles p-2 d-flex flex-row justify-content-star">
-                <div class="me-2   text-start">کد محصول : </div>
-                <div class="  text-start">{{vm.product.productCode}}</div>
-            </div>
-            <div class="  detiles p-2 d-flex flex-row justify-content-start">
-                <div class=" me-2 text-start">توضیحات:</div>
-                <div class=" ">{{vm.product.description}}</div>
-            </div>
-            <div class="  detiles p-2 d-flex flex-row justify-content-start">
-                <div class=" me-2 text-start">قیمت:</div>
-                <div class=" ">{{vm.product.price }}{{"ریال"}}</div>
-            </div>
-            <div class=" detiles p-2 d-flex flex-row justify-content-start">
-                <div class="me-2  text-start">شماره گروه:</div>
-                <div class=" ">{{vm.product.categoryId}}</div>
-            </div>
+<div class=" container-fluid " *ngIf="vm$|async as vm">
+  <div class="card bg-card  mx-auto">
+    <div class="card-header p-3 fw-bold">
+      {{vm.product?.productName}}
+    </div>
+ 
+        <div class="container-fluid my-2  ">
+          <div class="detiles  p-2 d-flex flex-row justify-content-start">
+            <div class=" me-2 text-start">نام محصول:</div>
+            <div class=" ">{{vm.product?.productName}}</div>
+          </div>
+          <div class=" detiles p-2 d-flex flex-row justify-content-star">
+            <div class="me-2   text-start">کد محصول : </div>
+            <div class="  text-start">{{vm.product?.productCode}}</div>
+          </div>
+          <div class="  detiles p-2 d-flex flex-row justify-content-start">
+            <div class=" me-2 text-start">توضیحات:</div>
+            <div class=" ">{{vm.product?.description}}</div>
+          </div>
+          <div class="  detiles p-2 d-flex flex-row justify-content-start">
+            <div class=" me-2 text-start">قیمت:</div>
+            <div class=" ">{{vm.product?.price }}{{" "+"ریال"}}</div>
+          </div>
+          <div class=" detiles p-2 d-flex flex-row justify-content-start">
+            <div class="me-2  text-start">شماره گروه:</div>
+            <div class=" ">{{vm.product?.categoryId}}</div>
+          </div>
         </div>
+
      
-        <div class="table-responsive"
-        >
-    <table class="table mb-0"
-           *ngIf="vm.productSuppliers && vm.productSuppliers.length">
-      <thead>
-        <tr>
-          <th>فروشنده</th>
-          <th>قیمت</th>
-          <th>تعداد موجود</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let supplier of vm.productSuppliers">
-          <td>{{ supplier.name }} </td>
-          <td>{{ supplier.cost }}</td>
-          <td>{{ supplier.minQuantity }}</td>
-        </tr>
-      </tbody>
-    </table>
+ 
+        <div class="table-responsive">
+          <table class="table mb-0" *ngIf="vm.productSuppliers && vm.productSuppliers.length">
+            <thead>
+              <tr>
+                <th class="ps-4">فروشنده</th>
+                <th class="ps-4">قیمت</th>
+                <th class="ps-4">تعداد موجود</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let supplier of vm.productSuppliers">
+                <td class="ps-4">{{ supplier.name }} </td>
+                <td class="ps-4">{{ supplier.cost }}{{" "+"ریال"}}</td>
+                <td class="ps-4">{{ supplier.minQuantity }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    
+
+
   </div>
-    </div>
-    </div>
+</div>
